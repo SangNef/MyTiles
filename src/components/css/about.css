@@ -1,0 +1,70 @@
+section.about {
+    width: 100%;
+    min-height: 100vh;
+}
+.about{
+    text-align: center;
+    padding: 20px 7%;
+}
+.about .description {
+    display: flex;
+    margin-top: 10%;
+    justify-content: space-around;
+    background-color: #13131a;
+}
+.about .description .image {
+    width: 50%;
+    position: relative;
+}
+.about .description .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .description .content {
+    width: 50%;
+    color: white;
+    padding: 30px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.about .description .content h3{
+    font-size: 30px;
+}
+.about .description .content p {
+    font-size: 16px;
+    padding: 10px 0;
+    line-height: 1.8;
+}
+.about .description .content button{
+    margin-top: 30px;
+    display: inline-block;
+    padding: 8px;
+    width: 10rem;
+    font-size: 17px;
+    color: #fff;
+    background: #d3ad7f;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.about .description .content button:hover{
+    background-color: #d3a267;
+}
+.about .who-we-are{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    background-color: #13131a;
+}
+.about .who-we-are .video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .who-we-are .content{
+    padding: 50px;
+    text-align: left;
+    color: white;
+}

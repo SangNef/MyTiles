@@ -1,38 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 .App {
-  text-align: center;
+  background-color: #757575 !important;
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App nav {
   display: flex;
-  flex-direction: column;
+  position: fixed;
+  background-color: #9e9e9e !important;
+  width: 100%;
+  height: 80px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 1;
+}
+a.navbar-brand {
+  position: relative;
+  align-items: center;
+  padding-top: 10px;
+}
+a.navbar-brand img {
+  width: 10rem;
+  height: auto;
+  background-size: cover;
+  padding-left: 50%;
+  cursor: pointer;
+}
+.navbar-collapse {
+  display: flex !important;
+  color: #eee !important;
+  justify-content: right !important;
+  text-align: center !important;
+}
+.collapse ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: inline-block;
+}
+.collapse li {
+  position: relative;
+  display: inline-block;
+  padding: 5px 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.collapse li a{
+  text-decoration: none;
+  color: #eee !important;
+}
+.collapse li:hover {
+  border-bottom: 1px solid #d3ad7f;
+}
+.collapse li ul{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  background-color: #75757577;
+  text-align: left;
+  display: none;
+}
+.collapse li:hover > ul {
+  display: block;
 }
 
-.App-link {
-  color: #61dafb;
+footer{
+    position: relative;
+    background-color: #13131a;
+    color: white;
+    width: 100%;
+    margin: 50px 0 0 0;
+    bottom: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer .row{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+footer .about-us{
+    width: 70%;
+}
+footer .about-us h3{
+    font-size: 2rem;
+}
+footer .content{
+    justify-content: center;
+    width: 30%;
+}
+footer .footer-link ul{
+    list-style: none;
+    display: flex;
+}
+footer .footer-link ul li{
+    padding-right: 50px;
+}
+footer .content .new-letter{
+    padding: 50px;
+}
+footer .content .new-letter input[type="email"]{
+    width: 50%;
+    padding: 10px;
+    border-radius: 8px 0 0 8px;
+}
+footer .content .new-letter input[type="submit"] {
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+}
+footer .copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

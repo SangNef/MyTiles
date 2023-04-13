@@ -1,0 +1,61 @@
+section.wall-tiles {
+    width: 100%;
+    min-height: 100vh;
+}
+.d-flex{
+    position: relative;
+    background-color: #757575;
+    width: 100%;
+    padding-top: 150px;
+}
+.d-flex .nav{
+    display: flex;
+    width: 15%;
+    padding-left: 3rem;
+}
+.d-flex .flex-column .nav-link{
+    color: #eee;
+    width: 200px;
+}
+.d-flex .flex-column .nav-link:hover{
+    color: #d3ad7f;
+}
+.d-flex .flex-column .nav-link.active{
+    background-color: #d3ad7f;
+    color: #eee !important;
+}
+.d-flex .fade.show{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 15px;
+    color: #eee;
+}
+.d-flex .fade.show .wall-items{
+    border: 1px solid #d3ad7f;
+    border-radius: 8px;
+    padding: 10px;
+}
+.d-flex .fade.show .wall-review{
+    position: relative;
+    top: 10px;
+}
+.d-flex .fade.show .wall-review .rating{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.d-flex .fade.show .wall-price{
+    display: flex;
+    justify-content: space-between;
+}
+.d-flex .fade.show .wall-price button{
+    border: 1px solid #d3a267;
+    border-radius: 4px;
+    background-color: unset;
+    color: #eee;
+    font-weight: 600;
+}
+.d-flex .fade.show .wall-price button:hover{
+    background-color: #d3ad7f;
+    transition: 0.5s;
+}
