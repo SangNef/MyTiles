@@ -1,9 +1,13 @@
 import React from 'react';
 import './css/contact.css';
+import contact from '../Images/contact.jpg'
 
 const Contact = () => {
     return (
       <section className="contact" id="contact-us">
+      <div className="thumb">
+        <img src={contact} alt="" />
+      </div>
         <div className="description">
           <div className="map">
             <iframe

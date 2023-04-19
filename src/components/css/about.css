@@ -1,16 +1,24 @@
 section.about {
+    position: relative;
     width: 100%;
     min-height: 100vh;
+    padding: 120px 7%;
 }
-.about{
+.about h2{
     text-align: center;
-    padding: 20px 7%;
+    color: var(--textColor);
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.about span{
+    color: var(--btnColor);
 }
 .about .description {
     display: flex;
-    margin-top: 10%;
     justify-content: space-around;
-    background-color: #13131a;
+    background-color: var(--grayDarkColor);
+    margin: 5% 0;
 }
 .about .description .image {
     width: 50%;
@@ -23,7 +31,7 @@ section.about {
 }
 .about .description .content {
     width: 50%;
-    color: white;
+    color: var(--textColor);
     padding: 30px 20px;
     text-align: left;
     display: flex;
@@ -43,20 +51,20 @@ section.about {
     padding: 8px;
     width: 10rem;
     font-size: 17px;
-    color: #fff;
-    background: #d3ad7f;
+    color: var(--textColor);
+    background: var(--btnColor);
     cursor: pointer;
     border-radius: 8px;
 }
 .about .description .content button:hover{
-    background-color: #d3a267;
+    background-color: var(--btnHover);
 }
 .about .who-we-are{
     margin: 50px 0;
     display: flex;
     justify-content: space-around;
     padding: 25px;
-    background-color: #13131a;
+    background-color: var(--grayDarkColor);
 }
 .about .who-we-are .video{
     display: flex;
@@ -66,5 +74,18 @@ section.about {
 .about .who-we-are .content{
     padding: 50px;
     text-align: left;
-    color: white;
+    color: var(--textColor);
+}
+@media screen and (max-width: 820px) {
+    .about .description,
+    .about .who-we-are{
+        flex-direction: column;
+    }
+    .about .description .image,
+    .about .description .content{
+        width: 100%;
+    }
+    .about .who-we-are .video{
+        width: 100%;
+    }
 }

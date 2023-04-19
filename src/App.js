@@ -1,61 +1,58 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import logo from "./logo.png";
+import logo from "./Images/logo.png";
 import Home from "./components/Home";
 import About from "./components/About";
 import WallTiles from "./components/WallTiles";
 import Contact from "./components/Contact";
 
 const App = () => {
+  const navRef = useRef();
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive-nav");
+  }
+
   return (
     <div className="App">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a class="navbar-brand" href="/">
-            <img src={logo} alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/about">
-                  About Us
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/contact">
-                  Contact
-                </a>
-              </li>
-              <li class="nav-item">
-                Product
-                <ul>
-                  <li>Wall Tiles</li>
-                  <li>Floor Tiles</li>
-                  <li>Special Tiles</li>
-                </ul>
-              </li>
-              
-            </ul>
-          </div>
+      <header>
+        <div className="logo">
+          <img src={logo} alt="" />
         </div>
-      </nav>
+        <nav ref={navRef}>
+          <ul className="menu">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About Us</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+            <li>
+              Product
+              <label>
+                <input type="checkbox" unchecked />
+                <i class="fa-solid fa-angle-down"></i>
+              </label>
+              <ul>
+                <li>
+                  <a href="/wall-tiles">Wall Tiles</a>
+                </li>
+                <li>Floor Tiles</li>
+                <li>Special Tiles</li>
+              </ul>
+            </li>
+          </ul>
+          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+            <i class="fa-solid fa-angles-left"></i>
+          </button>
+        </nav>
+        <button className="nav-btn nav-open-btn" onClick={showNavbar}>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </header>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -65,32 +62,38 @@ const App = () => {
       </Routes>
 
       <footer>
-        <div className="row">
-          <div className="about-us">
+        <div className="footer-row">
+          <div className="tiles-content">
             <h3>MyTiles</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-              dolorum hic voluptatem corporis sapiente, non, pariatur quod
-              mollitia id natus minima, cupiditate quidem qui voluptatum earum
-              ea nam dolorem accusamus. Quaerat officiis facere deleniti eius
-              saepe nam tempora, vel, dicta laudantium modi, hic ratione
-              consectetur fuga vero quidem nihil vitae aliquid unde velit. Culpa
-              recusandae commodi aliquid iste fugiat magnam! A tempore veniam
-              error atque aspernatur maxime quis voluptatem vero!
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad,
+              suscipit.
             </p>
           </div>
-          <div className="content">
-            <div className="footer-link">
-              <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-              </ul>
-            </div>
-            <div className="new-letter">
-              <input type="email" name="email" placeholder="enter your email" />
-              <input type="submit" value="Gửi" />
-            </div>
+          <div className="get-update">
+            <h3>Subrribe to get important updates</h3>
+            <label>
+              <input type="email" />
+              <button className="send-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </label>
+          </div>
+          <div className="follow">
+            <h3>Follow Us</h3>
+            <button className="follow-btn">
+              <i class="fa-brands fa-discord"></i>
+            </button>
+            <button className="follow-btn">
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+            <button className="follow-btn">
+              <i class="fa-brands fa-facebook"></i>
+            </button>
+          </div>
+          <div className="call-us">
+            <h3>Call Us</h3>
+            <p>(+84) 522943795</p>
           </div>
         </div>
         <div className="copyright">
